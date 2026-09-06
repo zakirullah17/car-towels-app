@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Car Towels Trading — Business Manager</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Sidebar / Nav -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">CT</div>
+        <div class="brand-text">
+          <div class="brand-title">Car Towels</div>
+          <div class="brand-sub">Trading Manager</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" data-page="dashboard">
+          <span class="nav-icon">◱</span> Dashboard
+        </button>
+        <button class="nav-item" data-page="local-purchases">
+          <span class="nav-icon">▤</span> Local Purchases
+        </button>
+        <button class="nav-item" data-page="cargo-purchases">
+          <span class="nav-icon">▥</span> Cargo Purchases
+        </button>
+        <button class="nav-item" data-page="sales">
+          <span class="nav-icon">▦</span> Sales
+        </button>
+        <button class="nav-item" data-page="revenue">
+          <span class="nav-icon">▧</span> Revenue
+        </button>
+        <button class="nav-item" data-page="investments">
+          <span class="nav-icon">▨</span> Investments
+        </button>
+        <button class="nav-item" data-page="settings">
+          <span class="nav-icon">⚙</span> Settings
+        </button>
+      </nav>
+      <div class="sidebar-footer">Data stored locally in SQLite</div>
+    </aside>
+
+    <!-- Main -->
+    <div class="main">
+      <header class="topbar">
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <h1 id="pageTitle">Dashboard</h1>
+        <div class="topbar-spacer"></div>
+      </header>
+      <main class="content" id="content">
+        <!-- pages injected here -->
+      </main>
+    </div>
+  </div>
+
+  <!-- Generic Modal for Add/Edit forms -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modalTitle">Add Record</h2>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
